@@ -3,22 +3,28 @@ $(document).ready(function(){
     event.preventDefault();
     var numbers = [2,3,4,5,6,7,8,9,10];
     var letters = ["ace", "jack", "queen", "king"]
-    var suites = ["clubs", "spades", "hearts", "diamonds"];
-    
+    var suites = ["clubs", "spades", "hearts", "diamonds"]
+    //var deck = [ace,2,3,4,5,6,7,8,9,10,jack, queen, king];
+    var numOutput =[];
+    var letterOutput = [];
+    var cardOutput = [];
     
     
     suites.forEach(function(suite){
       numbers.forEach(function(number){
         var numDeck = number + " of " + suite;
         // console.log(numDeck);
-        var cardOutput = [numDeck[0]];
-        console.log(cardOutput);
+        numOutput = numDeck;
+        // console.log(cardOutput);
       });
       letters.forEach(function(letter){
         var letterDeck = letter + " of " + suite;
-        // console.log(letterDeck);
+        letterOutput = letterDeck
       });
     });
+
+    cardOutput = numOutput.concat(letterOutput);
+    console.log(cardOutput);
 
 
 
