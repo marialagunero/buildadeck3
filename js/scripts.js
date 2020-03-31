@@ -4,16 +4,19 @@ $(document).ready(function(){
     var numbers = [2,3,4,5,6,7,8,9,10];
     var letters = ["ace", "jack", "queen", "king"]
     var suites = ["clubs", "spades", "hearts", "diamonds"];
-    // var numOutput = [];
+    
+    
     
     suites.forEach(function(suite){
       numbers.forEach(function(number){
         var numDeck = number + " of " + suite;
-        console.log(numDeck);
+        // console.log(numDeck);
+        var cardOutput = [numDeck[0]];
+        console.log(cardOutput);
       });
       letters.forEach(function(letter){
         var letterDeck = letter + " of " + suite;
-        console.log(letterDeck);
+        // console.log(letterDeck);
       });
     });
 
